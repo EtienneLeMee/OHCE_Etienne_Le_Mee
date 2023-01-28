@@ -10,10 +10,17 @@ class OHCETest(unittest.TestCase):
 
     def test_chaine_miroir(self):
         #Quand on saisit une chaine...
-        string = "salut"
-        result = ohce.miroir("tulas")
+        motSaisie = "salut"
         #...Alors celle-ci est retournée en miroir
-        self.assertTrue(result, string[0:len(string)])
+        self.assertTrue("tulas", motSaisie[0:len(motSaisie)])
+
+    def test_palindrome(self):
+        #Quand on saisie un palindrome
+        palindrome = "kayak"
+        #Alors celui-ci est renvoyé
+        self.assertIn(ohce.palindrome(palindrome),"kayak")
+        #Bien dit est envoyé ensuite
+        self.assertIn(ohce.palindrome(palindrome),"Bien dit !")
 
 
 if __name__ == '__main__':
