@@ -7,6 +7,7 @@ class OHCE:
         return "Bien dit !"
     def bonjour(self):
         return "Bonjour"
+
     def palindrome(string):
         ohce = OHCE()
         return OHCE.bonjour(ohce) \

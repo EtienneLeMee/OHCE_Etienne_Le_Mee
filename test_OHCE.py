@@ -12,7 +12,7 @@ class OHCETest(unittest.TestCase):
         #Quand on saisit une chaine...
         motSaisie = "salut"
         #...Alors celle-ci est retournée en miroir
-        self.assertTrue("tulas", motSaisie[0:len(motSaisie)])
+        self.assertTrue("tulas", ohce.miroir(motSaisie))
 
     def test_palindrome(self):
         #Quand on saisie un palindrome
@@ -28,6 +28,12 @@ class OHCETest(unittest.TestCase):
         bonjour = "Bonjour"
         #Alors bonjour est renvoyé avant toute réponse
         self.assertIn(bonjour,ohce.palindrome(palindrome)[0:len(bonjour)])
+
+    def test_aurevoir(self):
+        palindrome = "kayak"
+        aurevoir = "Au revoir !"
+        # Alors bonjour est renvoyé avant toute réponse
+        self.assertIn(aurevoir, ohce.palindrome(palindrome)[-len(aurevoir):])
 
 
 if __name__ == '__main__':
