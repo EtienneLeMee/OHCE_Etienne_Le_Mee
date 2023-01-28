@@ -1,4 +1,4 @@
 class OHCE:
     def miroir(string):
-        return 1
+        return string[::-1]
 
