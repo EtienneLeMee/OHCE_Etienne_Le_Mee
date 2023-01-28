@@ -22,6 +22,13 @@ class OHCETest(unittest.TestCase):
         #Bien dit est envoyé ensuite
         self.assertIn("Bien dit !",ohce.palindrome(palindrome))
 
+    def test_bonjour(self):
+        #Quand on saisit une chaine
+        palindrome = "kayak"
+        bonjour = "Bonjour"
+        #Alors bonjour est renvoyé avant toute réponse
+        self.assertIn(bonjour,ohce.palindrome(palindrome)[0:len(bonjour)])
+
 
 if __name__ == '__main__':
     unittest.main()
