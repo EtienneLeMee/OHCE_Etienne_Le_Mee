@@ -18,9 +18,9 @@ class OHCETest(unittest.TestCase):
         #Quand on saisie un palindrome
         palindrome = "kayak"
         #Alors celui-ci est renvoyé
-        self.assertIn(ohce.palindrome(palindrome),"kayak")
+        self.assertIn("kayak",ohce.palindrome(palindrome))
         #Bien dit est envoyé ensuite
-        self.assertIn(ohce.palindrome(palindrome),"Bien dit !")
+        self.assertIn("Bien dit !",ohce.palindrome(palindrome))
 
 
 if __name__ == '__main__':
