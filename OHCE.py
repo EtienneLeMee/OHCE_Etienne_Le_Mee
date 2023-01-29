@@ -29,9 +29,15 @@ class OHCE:
         elif langue=="en":
             return "Hello"
 
+    def au_revoir_langue(self,langue):
+        if langue=="fr":
+            return "Au revoir !"
+        elif langue=="en":
+            return "Bye !"
+
     def palindrome_langue(string,langue):
         ohce = OHCE()
         return OHCE.bonjour_langue(ohce,langue) \
             + OHCE.miroir(string) \
             + OHCE.bien_dit_langue(ohce,langue) \
-            + OHCE.au_revoir(ohce)
+            + OHCE.au_revoir_langue(ohce,langue)
