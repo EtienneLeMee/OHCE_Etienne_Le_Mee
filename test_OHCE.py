@@ -73,6 +73,22 @@ class OHCETest(unittest.TestCase):
         # Alors bonjour est renvoyé avant toute réponse
         self.assertIn(bonjour, ohce.palindrome_langue(palindrome,langue)[0:len(bonjour)])
 
+    def test_aurevoir_fr(self):
+        #Etant donné un utilisateur parlant une langue
+        langue = "fr"
+        palindrome = "kayak"
+        aurevoir = "Au revoir !"
+        # Alors bonjour est renvoyé avant toute réponse
+        self.assertIn(aurevoir, ohce.palindrome_langue(palindrome,langue)[-len(aurevoir):])
+
+    def test_aurevoir_en(self):
+        #Etant donné un utilisateur parlant une langue
+        langue = "en"
+        palindrome = "kayak"
+        aurevoir = "Bye !"
+        # Alors bonjour est renvoyé avant toute réponse
+        self.assertIn(aurevoir, ohce.palindrome_langue(palindrome,langue)[-len(aurevoir):])
+
 
 
 if __name__ == '__main__':
