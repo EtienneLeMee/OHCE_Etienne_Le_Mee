@@ -41,9 +41,9 @@ class OHCETest(unittest.TestCase):
         #Quand un palindrome est saisit
         palindrome = "kayak"
         # Alors celui-ci est renvoyé
-        self.assertIn("kayak", ohce.palindromeLangue(palindrome,langue))
+        self.assertIn("kayak", ohce.palindrome_langue(palindrome,langue))
         # Bien dit dans la langue est envoyé ensuite
-        self.assertIn("Bien dit !", ohce.palindromeLangue(palindrome,langue))
+        self.assertIn("Bien dit !", ohce.palindrome_langue(palindrome,langue))
 
     def test_biendit_en(self):
         #Etant donné un utilisateur parlant une langue
@@ -51,9 +51,9 @@ class OHCETest(unittest.TestCase):
         #Quand un palindrome est saisit
         palindrome = "kayak"
         # Alors celui-ci est renvoyé
-        self.assertIn("kayak", ohce.palindromeLangue(palindrome,langue))
+        self.assertIn("kayak", ohce.palindrome_langue(palindrome,langue))
         # Bien dit dans la langue est envoyé ensuite
-        self.assertIn("Well done !", ohce.palindromeLangue(palindrome,langue))
+        self.assertIn("Well done !", ohce.palindrome_langue(palindrome,langue))
 
 
 
