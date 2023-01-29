@@ -22,9 +22,16 @@ class OHCE:
             return "Bien dit !"
         elif langue=="en":
             return "Well done !"
+
+    def bonjour_langue(self,langue):
+        if langue=="fr":
+            return "Bonjour"
+        elif langue=="en":
+            return "Hello"
+
     def palindrome_langue(string,langue):
         ohce = OHCE()
-        return OHCE.bonjour(ohce) \
+        return OHCE.bonjour_langue(ohce,langue) \
             + OHCE.miroir(string) \
             + OHCE.bien_dit_langue(ohce,langue) \
             + OHCE.au_revoir(ohce)
