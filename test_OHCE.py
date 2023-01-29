@@ -35,6 +35,28 @@ class OHCETest(unittest.TestCase):
         # Alors bonjour est renvoyé avant toute réponse
         self.assertIn(aurevoir, ohce.palindrome(palindrome)[-len(aurevoir):])
 
+    def test_biendit_fr(self):
+        #Etant donné un utilisateur parlant une langue
+        langue = "fr"
+        #Quand un palindrome est saisit
+        palindrome = "kayak"
+        # Alors celui-ci est renvoyé
+        self.assertIn("kayak", ohce.palindromeLangue(palindrome,langue))
+        # Bien dit dans la langue est envoyé ensuite
+        self.assertIn("Bien dit !", ohce.palindromeLangue(palindrome,langue))
+
+    def test_biendit_en(self):
+        #Etant donné un utilisateur parlant une langue
+        langue = "en"
+        #Quand un palindrome est saisit
+        palindrome = "kayak"
+        # Alors celui-ci est renvoyé
+        self.assertIn("kayak", ohce.palindromeLangue(palindrome,langue))
+        # Bien dit dans la langue est envoyé ensuite
+        self.assertIn("Well done !", ohce.palindromeLangue(palindrome,langue))
+
+
+
 
 if __name__ == '__main__':
     unittest.main()
