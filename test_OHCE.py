@@ -55,6 +55,23 @@ class OHCETest(unittest.TestCase):
         # Bien dit dans la langue est envoyé ensuite
         self.assertIn("Well done !", ohce.palindrome_langue(palindrome,langue))
 
+    def test_bonjour_fr(self):
+        #Etant donné un utilisateur parlant une langue
+        langue = "fr"
+        # Quand on saisit une chaine
+        palindrome = "kayak"
+        bonjour = "Bonjour"
+        # Alors bonjour est renvoyé avant toute réponse
+        self.assertIn(bonjour, ohce.palindrome_langue(palindrome,langue)[0:len(bonjour)])
+
+    def test_bonjour_en(self):
+        #Etant donné un utilisateur parlant une langue
+        langue = "en"
+        # Quand on saisit une chaine
+        palindrome = "kayak"
+        bonjour = "Hello"
+        # Alors bonjour est renvoyé avant toute réponse
+        self.assertIn(bonjour, ohce.palindrome_langue(palindrome,langue)[0:len(bonjour)])
 
 
 
