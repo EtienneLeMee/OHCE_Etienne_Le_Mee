@@ -29,7 +29,14 @@ class OHCE:
             else:
                 return "Bonne soirée"
         elif langue=="en":
-            return "Hello"
+            if heure <= "12:00:00":
+                return "Hello"
+            elif heure <= "18:00:00":
+                return "Good afternoon"
+            elif heure <= "21:00:00":
+                return "Good evening"
+            else:
+                return "Good night"
 
     def palindrome_langue_periode(string,langue,heure):
         ohce = OHCE()
