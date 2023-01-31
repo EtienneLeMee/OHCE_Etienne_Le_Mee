@@ -5,18 +5,6 @@ class OHCE:
 
     def bien_dit(self):
         return "Bien dit !"
-    def bonjour(self):
-        return "Bonjour"
-
-    def au_revoir(self):
-        return "Au revoir !"
-
-    def palindrome(string):
-        ohce = OHCE()
-        return OHCE.bonjour(ohce) \
-            + OHCE.miroir(string) \
-            + OHCE.bien_dit(ohce) \
-            + OHCE.au_revoir(ohce)
 
     def bien_dit_langue(self,langue):
         if langue=="fr":
@@ -24,21 +12,28 @@ class OHCE:
         elif langue=="en":
             return "Well done !"
 
-    def bonjour_langue(self,langue):
-        if langue=="fr":
-            return "Bonjour"
-        elif langue=="en":
-            return "Hello"
-
     def au_revoir_langue(self,langue):
         if langue=="fr":
             return "Au revoir !"
         elif langue=="en":
             return "Bye !"
 
-    def palindrome_langue(string,langue):
+    def bonjour_langue_heure(self,langue,heure):
+        if langue=="fr":
+            if heure <= "12:00:00":
+                return "Bonjour"
+            elif heure <= "18:00:00":
+                return "Bon apres-midi"
+            elif heure <= "21:00:00":
+                return "Bonsoir"
+            else:
+                return "Bonne soirée"
+        elif langue=="en":
+            return "Hello"
+
+    def palindrome_langue_periode(string,langue,heure):
         ohce = OHCE()
-        return OHCE.bonjour_langue(ohce,langue) \
+        return OHCE.bonjour_langue_heure(ohce,langue,heure) \
             + OHCE.miroir(string) \
             + OHCE.bien_dit_langue(ohce,langue) \
             + OHCE.au_revoir_langue(ohce,langue)

@@ -17,7 +17,7 @@ class OHCETest(unittest.TestCase):
         #Quand on saisit une chaîne
         palindrome = "kayak"
         # Alors bonjour dans cette langue et à cette periode est renvoyé avant toute réponse
-        self.assertIn(bonjour, ohce.palindrome_langue(palindrome,langue,heure)[-len(bonjour):])
+        self.assertIn(bonjour, ohce.palindrome_langue_periode(palindrome,langue,heure)[:len(bonjour)])
 
     def test_bonjour_pm_fr(self):
         bonjour = "Bon apres-midi"
@@ -28,7 +28,7 @@ class OHCETest(unittest.TestCase):
         #Quand on saisit une chaîne
         palindrome = "kayak"
         # Alors bonjour dans cette langue et à cette periode est renvoyé avant toute réponse
-        self.assertIn(bonjour, ohce.palindrome_langue(palindrome,langue,heure)[-len(bonjour):])
+        self.assertIn(bonjour, ohce.palindrome_langue_periode(palindrome,langue,heure)[:len(bonjour)])
 
     def test_bonjour_soir_fr(self):
         bonjour = "Bonsoir"
@@ -39,7 +39,7 @@ class OHCETest(unittest.TestCase):
         #Quand on saisit une chaîne
         palindrome = "kayak"
         # Alors bonjour dans cette langue et à cette periode est renvoyé avant toute réponse
-        self.assertIn(bonjour, ohce.palindrome_langue(palindrome,langue,heure)[-len(bonjour):])
+        self.assertIn(bonjour, ohce.palindrome_langue_periode(palindrome,langue,heure)[:len(bonjour)])
 
     def test_bonjour_nuit_fr(self):
         bonjour = "Bonne soirée"
@@ -50,7 +50,7 @@ class OHCETest(unittest.TestCase):
         #Quand on saisit une chaîne
         palindrome = "kayak"
         # Alors bonjour dans cette langue et à cette periode est renvoyé avant toute réponse
-        self.assertIn(bonjour, ohce.palindrome_langue(palindrome,langue,heure)[-len(bonjour):])
+        self.assertIn(bonjour, ohce.palindrome_langue_periode(palindrome,langue,heure)[:len(bonjour)])
 
     def test_bonjour_am_en(self):
         bonjour = "Hello"
@@ -61,7 +61,7 @@ class OHCETest(unittest.TestCase):
         #Quand on saisit une chaîne
         palindrome = "kayak"
         # Alors bonjour dans cette langue et à cette periode est renvoyé avant toute réponse
-        self.assertIn(bonjour, ohce.palindrome_langue(palindrome,langue,heure)[-len(bonjour):])
+        self.assertIn(bonjour, ohce.palindrome_langue_periode(palindrome,langue,heure)[:len(bonjour)])
 
     def test_bonjour_pm_en(self):
         bonjour = "Good afternoon"
@@ -72,7 +72,7 @@ class OHCETest(unittest.TestCase):
         #Quand on saisit une chaîne
         palindrome = "kayak"
         # Alors bonjour dans cette langue et à cette periode est renvoyé avant toute réponse
-        self.assertIn(bonjour, ohce.palindrome_langue(palindrome,langue,heure)[-len(bonjour):])
+        self.assertIn(bonjour, ohce.palindrome_langue_periode(palindrome,langue,heure)[:len(bonjour)])
 
     def test_bonjour_soir_en(self):
         bonjour = "Good evening"
@@ -83,7 +83,7 @@ class OHCETest(unittest.TestCase):
         #Quand on saisit une chaîne
         palindrome = "kayak"
         # Alors bonjour dans cette langue et à cette periode est renvoyé avant toute réponse
-        self.assertIn(bonjour, ohce.palindrome_langue(palindrome,langue,heure)[-len(bonjour):])
+        self.assertIn(bonjour, ohce.palindrome_langue_periode(palindrome,langue,heure)[:len(bonjour)])
 
     def test_bonjour_nuit_en(self):
         bonjour = "Good night"
@@ -94,7 +94,7 @@ class OHCETest(unittest.TestCase):
         #Quand on saisit une chaîne
         palindrome = "kayak"
         # Alors bonjour dans cette langue et à cette periode est renvoyé avant toute réponse
-        self.assertIn(bonjour, ohce.palindrome_langue(palindrome,langue,heure)[-len(bonjour):])
+        self.assertIn(bonjour, ohce.palindrome_langue_periode(palindrome,langue,heure)[:len(bonjour)])
 
 
 if __name__ == '__main__':
