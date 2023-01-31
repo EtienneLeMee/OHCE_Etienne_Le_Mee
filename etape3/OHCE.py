@@ -57,4 +57,4 @@ class OHCE:
         return OHCE.bonjour_langue_heure(ohce,langue,heure) \
             + OHCE.miroir(string) \
             + OHCE.bien_dit_langue(ohce,langue) \
-            + OHCE.au_revoir_langue_heure(ohce,langue,heure)
+            + OHCE.aurevoir_langue_heure(ohce,langue,heure)
