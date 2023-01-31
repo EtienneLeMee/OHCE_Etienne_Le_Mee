@@ -2,6 +2,8 @@ import unittest
 from datetime import datetime
 from unittest.mock import patch
 
+import locale
+
 import OHCE
 from OHCE import OHCE as ohce
 import os
@@ -12,7 +14,7 @@ class OHCETest(unittest.TestCase):
     def test_langue_systeme(self):
         bonjour = "Bonjour"
         #Etant donné un utilisateur parlant une langue
-        langue = os.getenv('LANG')
+        langue = locale.getdefaultlocale()[0][:2]
         #Et la période de la journée
         heure = "08:00:00"
         #Quand on saisit une chaîne

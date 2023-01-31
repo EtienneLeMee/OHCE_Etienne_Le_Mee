@@ -1,3 +1,6 @@
+import locale
+
+
 class OHCE:
 
     def miroir(string):
@@ -6,14 +9,14 @@ class OHCE:
     def bien_dit(self):
         return "Bien dit !"
 
-    def bien_dit_langue(self,langue):
-        if langue=="fr":
+    def bien_dit_langue(self, langue):
+        if langue == "fr":
             return "Bien dit !"
-        elif langue=="en":
+        elif langue == "en":
             return "Well done !"
 
-    def bonjour_langue_heure(self,langue,heure):
-        if langue=="fr":
+    def bonjour_langue_heure(self, langue, heure):
+        if langue == "fr":
             if heure <= "12:00:00":
                 return "Bonjour"
             elif heure <= "18:00:00":
@@ -22,7 +25,7 @@ class OHCE:
                 return "Bonsoir"
             else:
                 return "Bonne soirée"
-        elif langue=="en":
+        elif langue == "en":
             if heure <= "12:00:00":
                 return "Hello"
             elif heure <= "18:00:00":
@@ -42,7 +45,7 @@ class OHCE:
                 return "Bonne fin de soirée !"
             else:
                 return "Bonne nuit !"
-        elif langue == "en":
+        else: #Initial language is en
             if heure <= "12:00:00":
                 return "Bye !"
             elif heure <= "18:00:00":
@@ -52,9 +55,20 @@ class OHCE:
             else:
                 return "Good night, see you soon !"
 
-    def palindrome_langue_periode(string,langue,heure):
+    def palindrome_langue_periode(string, langue, heure):
+        print(langue)
         ohce = OHCE()
-        return OHCE.bonjour_langue_heure(ohce,langue,heure) \
-            + OHCE.miroir(string) \
-            + OHCE.bien_dit_langue(ohce,langue) \
-            + OHCE.aurevoir_langue_heure(ohce,langue,heure)
+        return OHCE.bonjour_langue_heure(ohce, langue, heure) \
+               + OHCE.miroir(string) \
+               + OHCE.bien_dit_langue(ohce, langue) \
+               + OHCE.aurevoir_langue_heure(ohce, langue, heure)
+
+
+def main(self):
+    sysLangue = locale.getdefaultlocale()[0][:2]
+    self.palindrome_langue_periode("kayak", sysLangue, "08:00:00")
+
+
+if __name__ == '__main__':
+    ohce = OHCE
+    main(ohce)
